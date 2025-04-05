@@ -12,22 +12,23 @@ public class Principal {
 		alumno1 = new Alumno();
 		
 		//Asignar valores a los atributos del objeto
-		alumno1.codigo = "N012587";
+		alumno1.setCodigo("N012587");
 		alumno1.nombre = "Pedro Navaja";
 		alumno1.nota1 = 17;
 		alumno1.nota2 = 9;
 		
 		//Segundo objeto
 		Alumno alumno2 = new Alumno();
-		alumno2.codigo = "N666666";
+		alumno2.setCodigo("N666666");
 		alumno2.nombre = "Juanito Alimaña";
 		alumno2.nota1 = 18;
 		alumno2.nota2 = 19;
 		
-		System.out.println("Alumno 1: " + alumno1);
+		System.out.println("Alumno 1: " + alumno1.getCodigo());
 		System.out.println("Promedio alumno 1: " + alumno1.calcularPromedio());
-		System.out.println("Alumno 2: " + alumno2);
+		System.out.println("Alumno 2: " + alumno2.getCodigo());
 		System.out.println("Promedio alumno 2: " + alumno2.calcularPromedio());
+		
 	}
 
 }
