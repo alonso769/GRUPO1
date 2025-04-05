@@ -48,5 +48,10 @@ this.nombre = nombre;
 	public double calcularPromedio() {
 		return (nota1 + nota2) / 2.0;
 	}
-
+	
+	//Método nota
+	public Alumno(int nota1, int nota2) {
+    this.nota1 = nota1;
+    this.nota2 = nota2;
+    }
 }

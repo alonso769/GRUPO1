@@ -9,6 +9,27 @@ public class Principal {
 		Alumno alumno1;
 		
 		//Construyendo el objeto en la variable
+
+		alumno1 = new Alumno(00,00);
+		
+		
+		//Asignar valores a los atributos del objeto
+		alumno1.setCodigo("N012587");
+		alumno1.nombre = "Pedro Navaja";
+		
+		
+		//Segundo objeto
+		Alumno alumno2 = new Alumno(00,00);
+		alumno2.setCodigo("N666666");
+		alumno2.nombre = "Juanito Alimaña";
+		alumno2.setNota1(18);
+		alumno2.setNota2(19);
+		
+		
+		
+		
+		System.out.println("Alumno 1: " + alumno1.getCodigo());
+
 		alumno1 = new Alumno("Pedrito", "00000");
 		
 		//Asignar valores a los atributos del objeto
@@ -24,6 +45,7 @@ public class Principal {
 		alumno2.setNota2(19);
 		System.out.println("Alumno 1: " + alumno1.nombre);
 		System.out.println("codigo: " + alumno1.getCodigo());
+
 		System.out.println("Promedio alumno 1: " + alumno1.calcularPromedio());
 		System.out.println("Alumno 2: " + alumno2.nombre);
 		System.out.println("codigo: " + alumno2.getCodigo());
