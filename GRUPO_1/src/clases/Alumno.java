@@ -6,7 +6,18 @@ public class Alumno {
 	public String getCodigo() {
 		return codigo;
 	}
+	
+	// creacion del Constructor
+	
+	public Alumno (String nombre, String codigo) {
+this.codigo = codigo;
+this.nombre = nombre;
+	
+	}
 
+	 
+	
+	
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
