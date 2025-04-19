@@ -1,57 +1,59 @@
 package clases;
 
 public class Alumno {
-	//Atributos miembro con modificadores de acceso público
-	private String codigo;
-	public String getCodigo() {
-		return codigo;
-	}
-	
-	// creacion del Constructor
-	
-	public Alumno (String nombre, String codigo) {
-this.codigo = codigo;
-this.nombre = nombre;
-	
-	}
+    // Atributos privados para mantener la encapsulación
+    private String codigo;
+    private String nombre;
+    private int nota1;
+    private int nota2;
 
-	 
-	
-	
-	public void setCodigo(String codigo) {
-		this.codigo = codigo;
-	}
+    // Constructor principal
+    public Alumno(String nombre, String codigo) {
+        this.nombre = nombre;
+        this.codigo = codigo;
+    }
 
-	public String nombre;
-	private int nota1;
-	private int nota2;
-	
-	
-	// creacion de los metodos gett y sett
-	public int getNota1() {
-		return nota1;
-	}
+    // Constructor para inicializar las notas
+    public Alumno(int nota1, int nota2) {
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+    }
 
-	public void setNota1(int nota1) {
-		this.nota1 = nota1;
-	}
+    // Métodos getter y setter para encapsulación
+    public String getCodigo() {
+        return codigo;
+    }
 
-	public int getNota2() {
-		return nota2;
-	}
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
 
-	public void setNota2(int nota2) {
-		this.nota2 = nota2;
-	}
+    public String getNombre() {
+        return nombre;
+    }
 
-	//Métodos miembro
-	public double calcularPromedio() {
-		return (nota1 + nota2) / 2.0;
-	}
-	
-	//Método nota
-	public Alumno(int nota1, int nota2) {
-    this.nota1 = nota1;
-    this.nota2 = nota2;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getNota1() {
+        return nota1;
+    }
+
+    public void setNota1(int nota1) {
+        this.nota1 = nota1;
+    }
+
+    public int getNota2() {
+        return nota2;
+    }
+
+    public void setNota2(int nota2) {
+        this.nota2 = nota2;
+    }
+
+    // Método para calcular el promedio de notas
+    public double calcularPromedio() {
+        return (nota1 + nota2) / 2.0;
     }
 }
