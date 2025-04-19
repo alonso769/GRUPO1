@@ -22,7 +22,7 @@ public class Principal {
 
         // Imprimir información del segundo alumno
         System.out.println("Alumno 2: " + alumno2.getNombre());
-        System.out.println("Código: " + alumno2.getCodigo());
+        System.out.println("Códigooo: " + alumno2.getCodigo());
         System.out.println("Promedio: " + alumno2.calcularPromedio());
     }
 }
