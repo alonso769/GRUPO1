@@ -1,29 +1,49 @@
 package gui;
 
+import java.util.Scanner;
+
 import clases.Alumno;
+ 
 
 public class Principal {
 
     public static void main(String[] args) {
-        // Creando el primer alumno
-        Alumno alumno1 = new Alumno("Pedro Navaja", "N012587");
-        alumno1.setNota1(17);
-        alumno1.setNota2(9);
+    	Scanner scanner = new Scanner(System.in);
 
-        // Creando el segundo alumno
-        Alumno alumno2 = new Alumno("Juanito Alimaña", "N0027260");
-        alumno2.setNota1(18);
-        alumno2.setNota2(19);
+        // Opción para crear un alumno con datos predeterminados
+        System.out.print("¿Desea crear un alumno con datos predeterminados? (si/no): ");
+        String opcion = scanner.nextLine();
 
-        // Imprimir información del primer alumno
-        System.out.println("Alumno 1: " + alumno1.getNombre());
-        System.out.println("Código: " + alumno1.getCodigo());
-        System.out.println("Promedio: " + alumno1.calcularPromedio());
+        Alumno alumno;
 
-        // Imprimir información del segundo alumno
-        System.out.println("Alumno 2: " + alumno2.getNombre());
-        System.out.println("Código: " + alumno2.getCodigo());
-        System.out.println("Promedio: " + alumno2.calcularPromedio());
+        if (opcion.equalsIgnoreCase("si")) {
+            alumno = new Alumno(); // Crea un alumno con valores predeterminados
+        } else {
+            // Solicitar datos al usuario
+            System.out.print("Ingrese el código del alumno: ");
+            String codigo = scanner.nextLine();
+
+            System.out.print("Ingrese el nombre del alumno: ");
+            String nombre = scanner.nextLine();
+
+            System.out.print("Ingrese la primera nota: ");
+            int nota1 = scanner.nextInt();
+
+            System.out.print("Ingrese la segunda nota: ");
+            int nota2 = scanner.nextInt();
+
+            alumno = new Alumno(codigo, nombre, nota1, nota2); // Crea el objeto Alumno con valores ingresados
+        }
+
+        // Mostrar datos del alumno
+        System.out.println("\nDetalles del alumno:");
+        System.out.println(alumno.datosAlumno());
+
+        scanner.close();
     }
-}
+        
+        
+        
+    }
+ 
 
