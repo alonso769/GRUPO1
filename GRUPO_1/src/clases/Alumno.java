@@ -20,8 +20,8 @@ public class Alumno {
     public Alumno(String codigo, String nombre, int nota1, int nota2) {
         this.codigo = codigo;
         this.nombre = nombre;
-        this.nota1 = nota1;
-        this.nota2 = nota2;
+        setNota1(nota1); // Usar el setter para la validación
+        setNota2(nota2); // Usar el setter para la validación
     }
 
     // Métodos getter y setter para encapsulación
@@ -47,15 +47,15 @@ public class Alumno {
 
     // Modificando la validacion de la noa que cumpla el rango 0 a 20
     public void setNota1(Object nota1) {
-        if (nota1 instanceof Integer) { // Verifica si el objeto es un entero
-            int valor = (int) nota1; // Conversión segura al tipo entero
-            if (valor >= 0 && valor <= 20) { 
-                this.nota1 = valor; 
+        if (nota1 instanceof Integer) {
+            int valor = (int) nota1;
+            if (valor >= 0 && valor <= 20) {
+                this.nota1 = valor;
             } else {
-                System.out.println("Error: La nota debe estar entre 0 y 20.");
+                throw new IllegalArgumentException("Error: La nota debe estar entre 0 y 20.");
             }
         } else {
-            System.out.println("Error: El valor ingresado no es un entero válido.");
+            throw new IllegalArgumentException("Error: El valor ingresado no es un entero válido.");
         }
     }
 
@@ -65,15 +65,15 @@ public class Alumno {
 
     //  Modificando la validacion de la noa que cumpla el rango 0 a 20
     public void setNota2(Object nota2) {
-        if (nota2 instanceof Integer) { // Verifica si el objeto es un entero
-            int valor = (int) nota2; // Conversión segura al tipo entero
-            if (valor >= 0 && valor <= 20) { 
-                this.nota2 = valor; 
+        if (nota2 instanceof Integer) {
+            int valor = (int) nota2;
+            if (valor >= 0 && valor <= 20) {
+                this.nota2 = valor;
             } else {
-                System.out.println("Error: La nota debe estar entre 0 y 20.");
+                throw new IllegalArgumentException("Error: La nota debe estar entre 0 y 20.");
             }
         } else {
-            System.out.println("Error: El valor ingresado no es un entero válido.");
+            throw new IllegalArgumentException("Error: El valor ingresado no es un entero válido.");
         }
     }
 

@@ -27,7 +27,12 @@ public class Principal {
             int nota1 = solicitarNota(scanner, "Ingrese la primera nota (debe ser un entero entre 0 y 20): ");
             int nota2 = solicitarNota(scanner, "Ingrese la segunda nota (debe ser un entero entre 0 y 20): ");
 
-            alumno = new Alumno(codigo, nombre, nota1, nota2); // Crea el objeto Alumno con valores ingresados
+            try {
+                alumno = new Alumno(codigo, nombre, nota1, nota2); // Crea el objeto Alumno con valores ingresados
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+                return; // O alguna otra lógica para manejar el error
+            }
         }
 
         // Mostrar datos del alumno
